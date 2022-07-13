@@ -31,8 +31,8 @@
             <div class = "mb-2">
                 <div class="input-group mb-1" style="width:75vw">
                     <span class="input-group-text" style="min-width:9vw" id="basic-addon3">SKU</span>
-                    <input v-if = "valid.sku" type="text" class="form-control" v-model="sku" aria-describedby="basic-addon3">
-                    <input v-else type="text" class="form-control is-invalid" v-model="sku" aria-describedby="basic-addon3">
+                    <input v-if = "valid.sku" type="text" class="form-control" v-model="sku" aria-describedby="basic-addon3" id = "sku">
+                    <input v-else type="text" class="form-control is-invalid" v-model="sku" aria-describedby="basic-addon3" id = "sku">
                 </div>
                 <div v-if = "!valid.sku" class = "ms-2 mb text-danger"> {{skuErrorText}} </div>
             </div>
@@ -40,8 +40,8 @@
             <div class="mb-2">
                 <div class="input-group mb-1" style="width:75vw">
                     <span class="input-group-text" style="min-width:9vw" id="basic-addon3">Name</span>
-                    <input v-if = "valid.name" type="text" class="form-control" v-model="name" aria-describedby="basic-addon3">
-                    <input v-else type="text" class="form-control is-invalid" v-model="name" aria-describedby="basic-addon3">
+                    <input v-if = "valid.name" type="text" class="form-control" v-model="name" aria-describedby="basic-addon3" id = "name">
+                    <input v-else type="text" class="form-control is-invalid" v-model="name" aria-describedby="basic-addon3" id = "name">
                 </div>
                 <div v-if = "!valid.name" class = "ms-2 mb text-danger"> Please, provide the data of indicated type</div>
             </div>
@@ -49,8 +49,8 @@
             <div class="mb-2">
                 <div class="input-group mb-1" style="width:75vw">
                     <span class="input-group-text" style="min-width:9vw" id="basic-addon3">Price($)</span>
-                    <input v-if = "valid.price" type="text" class="form-control " v-model="price" aria-describedby="basic-addon3">
-                    <input v-else type="text" class="form-control is-invalid" v-model="price" aria-describedby="basic-addon3">
+                    <input v-if = "valid.price" type="text" class="form-control " v-model="price" aria-describedby="basic-addon3" id = "price">
+                    <input v-else type="text" class="form-control is-invalid" v-model="price" aria-describedby="basic-addon3" id = "price">
                 </div>
                 <div v-if = "!valid.price" class = "ms-2 mb text-danger"> Please, provide the data of indicated type</div>
             </div>
@@ -70,8 +70,8 @@
             <div v-if="count==1" class="mb-2">
                 <div class="input-group mb-1" style="width:75vw">
                     <span class="input-group-text" style="min-width:9vw" id="basic-addon3">Size (MB)</span>
-                    <input v-if = "valid.size" type="text" class="form-control " v-model="size" aria-describedby="basic-addon3">
-                    <input v-else type="text" class="form-control is-invalid" v-model="size" aria-describedby="basic-addon3">
+                    <input v-if = "valid.size" type="text" class="form-control " v-model="size" aria-describedby="basic-addon3" id = "size">
+                    <input v-else type="text" class="form-control is-invalid" v-model="size" aria-describedby="basic-addon3" id = "size">
                 </div>
                 <div v-if = "!valid.size" class = "ms-2 mb text-danger"> Please, provide the data of indicated type</div>
             </div>
@@ -81,8 +81,8 @@
                 <div class="mb-2">
                     <div class="input-group mb-1" >
                         <span class="input-group-text" style="min-width:9vw" id="basic-addon3">Height (CM)</span>
-                        <input v-if = "valid.height" type="text" class="form-control " v-model="height" aria-describedby="basic-addon3">
-                        <input v-else-if = "!valid.height" type="text" class="form-control is-invalid" v-model="height" aria-describedby="basic-addon3">
+                        <input v-if = "valid.height" type="text" class="form-control " v-model="height" aria-describedby="basic-addon3" id = "height">
+                        <input v-else-if = "!valid.height" type="text" class="form-control is-invalid" v-model="height" aria-describedby="basic-addon3" id = "height">
                     </div>
                     <div v-if = "!valid.height" class = "ms-2 mb text-danger"> Please, provide the data of indicated type</div>
                 </div>
@@ -90,8 +90,8 @@
                 <div class="mb-2">
                     <div class="input-group mb-1">
                         <span class="input-group-text" style="min-width:9vw" id="basic-addon3">Width (CM)</span>
-                        <input v-if = "valid.width" type="text" class="form-control " v-model="width" aria-describedby="basic-addon3">                    
-                        <input v-else-if = "!valid.width" type="text" class="form-control is-invalid" v-model="width" aria-describedby="basic-addon3">
+                        <input v-if = "valid.width" type="text" class="form-control " v-model="width" aria-describedby="basic-addon3" id = "width">                    
+                        <input v-else-if = "!valid.width" type="text" class="form-control is-invalid" v-model="width" aria-describedby="basic-addon3" id = "width">
                     </div>
                     <div v-if = "!valid.width" class = "ms-2 mb text-danger"> Please, provide the data of indicated type</div>
                 </div>
@@ -100,8 +100,8 @@
                 <div class="mb-2">
                     <div class="input-group mb-1">
                         <span class="input-group-text" style="min-width:9vw" id="basic-addon3">Length (CM)</span>
-                        <input v-if = "valid.length" type="text" class="form-control " v-model="length" aria-describedby="basic-addon3">
-                        <input v-else-if = "!valid.length" type="text" class="form-control is-invalid" v-model="length" aria-describedby="basic-addon3">
+                        <input v-if = "valid.length" type="text" class="form-control " v-model="length" aria-describedby="basic-addon3" id = "length">
+                        <input v-else-if = "!valid.length" type="text" class="form-control is-invalid" v-model="length" aria-describedby="basic-addon3" id = "length">
                     </div>
                     <div v-if = "!valid.length" class = "ms-2 mb text-danger"> Please, provide the data of indicated type</div>
                 </div>
@@ -112,8 +112,8 @@
                 <div class="mb-2">
                     <div class="input-group mb-1">
                         <span class="input-group-text" id="basic-addon3">Weight (KG)</span>
-                        <input v-if = "valid.weight" type="text" class="form-control " v-model="weight" aria-describedby="basic-addon3">
-                        <input v-else-if = "!valid.weight" type="text" class="form-control is-invalid" v-model="weight" aria-describedby="basic-addon3">
+                        <input v-if = "valid.weight" type="text" class="form-control " v-model="weight" aria-describedby="basic-addon3" id = "weight">
+                        <input v-else-if = "!valid.weight" type="text" class="form-control is-invalid" v-model="weight" aria-describedby="basic-addon3" id = "weight">
                     </div>
                     <div v-if = "!valid.weight" class = "ms-2 mb text-danger"> Please, provide the data of indicated type</div>
                 </div>
