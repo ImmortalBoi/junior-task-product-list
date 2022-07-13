@@ -2,7 +2,7 @@
     //Connection to server
     $dbServerName = "localhost";
     $dbUsername = "root";
-    $dbPassword = "Warrior0";
+    $dbPassword = "";
     $dbName = "product_list";
 
     $con = mysqli_connect($dbServerName, $dbUsername, $dbPassword, $dbName);
